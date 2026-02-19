@@ -86,6 +86,10 @@ class MainActivity : ComponentActivity() {
                             ExpenseScreen(rootNavController = rootNavController)
                         }
 
+                        composable(route = Screen.Chat.route) {
+                            ChatScreen(rootNavController = rootNavController)
+                        }
+
                         composable(
                             route = "scan_result/{uri}",
                             arguments = listOf(navArgument("uri") { type = NavType.StringType })
@@ -94,7 +98,6 @@ class MainActivity : ComponentActivity() {
                             val uri = Uri.parse(uriString)
 
                             ScanResultScreen(
-                                navController = rootNavController,
                                 imageUri = uri
                             )
                         }

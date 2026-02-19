@@ -8,4 +8,5 @@ sealed class Screen(val route: String) {
     object AddWallet : Screen("add_wallet_screen")
     object Income : Screen("income_screen")
     object Expense : Screen("expense_screen")
+    object Chat: Screen("chat_screen")
 }

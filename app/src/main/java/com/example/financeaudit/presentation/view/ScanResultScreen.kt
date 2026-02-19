@@ -24,7 +24,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.example.financeaudit.domain.model.CategoryData
-import com.example.financeaudit.presentation.MainActivity
 import com.example.financeaudit.presentation.ui.components.AppBar
 import com.example.financeaudit.presentation.ui.components.ButtonC
 import com.example.financeaudit.presentation.ui.components.InputC
@@ -34,7 +33,6 @@ import com.example.financeaudit.presentation.viewmodel.ScanViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScanResultScreen(
-    navController: NavController,
     imageUri: Uri,
     viewModel: ScanViewModel = hiltViewModel()
 ) {
@@ -66,7 +64,7 @@ fun ScanResultScreen(
     }
 
     Scaffold(
-        topBar = { AppBar(titleContent = { Text("Scan Result") }, onBackClick = { navController.popBackStack() }) }
+        topBar = { AppBar(titleContent = { Text("Scan Result") }) }
     ) { innerPadding ->
 
         if (state.isAnalyzing) {

@@ -48,7 +48,7 @@ fun MainScreen(
                         }
                     },
                     onScanClick = {
-                        bottomNavController.navigate(BottomNavItem.Scan.route)
+                        rootNavController.navigate(Screen.Chat.route)
                     }
                 )
             }
